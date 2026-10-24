@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://ck673twg4avq4"]
+
+[ext_resource type="Script" uid="uid://cq41ym1f818km" path="res://Assets/Scripts/game_world.gd" id="1_c4e7b"]
+
+[node name="GameWorld" type="Node2D" unique_id=1176257089]
+script = ExtResource("1_c4e7b")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=2011772814]
+
+[node name="GameOverUI" type="CanvasLayer" parent="." unique_id=1247939436]
+
+[node name="PlayerUI" type="CanvasLayer" parent="." unique_id=1620637852]
+
+[node name="Panel" type="Panel" parent="PlayerUI" unique_id=1138851137]
+offset_right = 1148.0
+offset_bottom = 646.0
+
+[node name="PlayerHealthLabel" type="Label" parent="PlayerUI" unique_id=837563749]
+offset_left = 1.0
+offset_top = 25.0
+offset_right = 174.0
+offset_bottom = 48.0
+text = "HEALTH"
+
+[node name="PlayerScoreLabel" type="Label" parent="PlayerUI" unique_id=43006783]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "SCORE"
+
+[node name="PauseTextureButton" type="TextureButton" parent="PlayerUI" unique_id=1674816296]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="WaveLabel" type="Label" parent="PlayerUI" unique_id=618791287]
+offset_left = 1.0
+offset_top = 55.0
+offset_right = 192.0
+offset_bottom = 78.0
+text = "WAVE"

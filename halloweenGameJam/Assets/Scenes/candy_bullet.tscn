@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://b6lc3aemduj4c"]
+
+[ext_resource type="Script" uid="uid://dypervrwjb7lr" path="res://Assets/Scripts/candy_bullet.gd" id="1_jpm25"]
+
+[node name="Area2D" type="Area2D" unique_id=1279814720]
+script = ExtResource("1_jpm25")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=47999188]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2045978162]
