@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://budgjaciofn56"]
 
 [ext_resource type="Script" uid="uid://bujc0ykcqqfg0" path="res://Assets/Scripts/title_screen.gd" id="1_8plbf"]
+[ext_resource type="FontFile" uid="uid://rj2tcbopc3or" path="res://Assets/Fonts/Scary Feet.ttf" id="2_i1ksy"]
 
 [node name="TitleScreen" type="Control" unique_id=1875287960]
 layout_mode = 3
@@ -11,45 +12,93 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_8plbf")
 
-[node name="CreditsUI" type="CanvasLayer" parent="." unique_id=1204783391]
+[node name="CreditButton" type="Button" parent="." unique_id=482060809]
+layout_mode = 0
+offset_left = 472.0
+offset_top = 280.0
+offset_right = 675.0
+offset_bottom = 320.0
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("2_i1ksy")
+theme_override_font_sizes/font_size = 28
+text = "Credits"
 
-[node name="CreditsLabel" type="Label" parent="CreditsUI" unique_id=495572679]
-offset_right = 40.0
+[node name="QuitButton" type="Button" parent="." unique_id=871315375]
+layout_mode = 0
+offset_left = 472.0
+offset_top = 456.0
+offset_right = 675.0
+offset_bottom = 496.0
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("2_i1ksy")
+theme_override_font_sizes/font_size = 28
+text = "Quit"
+
+[node name="StartButton" type="Button" parent="." unique_id=1366472926]
+layout_mode = 0
+offset_left = 472.0
+offset_top = 192.0
+offset_right = 675.0
+offset_bottom = 232.0
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("2_i1ksy")
+theme_override_font_sizes/font_size = 28
+text = "START"
+
+[node name="HelpButton" type="Button" parent="." unique_id=329942299]
+layout_mode = 0
+offset_left = 472.0
+offset_top = 368.0
+offset_right = 675.0
+offset_bottom = 408.0
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("2_i1ksy")
+theme_override_font_sizes/font_size = 28
+text = "Help"
+
+[node name="TitleLabel" type="Label" parent="." unique_id=1110927392]
+layout_mode = 0
+offset_left = 190.0
+offset_top = 27.0
+offset_right = 967.0
+offset_bottom = 169.0
+theme_override_constants/outline_size = 30
+theme_override_fonts/font = ExtResource("2_i1ksy")
+theme_override_font_sizes/font_size = 128
+text = "CANDY CRITTERS"
+
+[node name="HelpUI" type="CanvasLayer" parent="." unique_id=1076240908]
+
+[node name="Panel" type="Panel" parent="HelpUI" unique_id=766632946]
+offset_right = 1155.0
+offset_bottom = 648.0
+
+[node name="CreditsLabel" type="Label" parent="HelpUI" unique_id=955326225]
+offset_right = 109.0
 offset_bottom = 23.0
 text = "CREDITS HERE"
+
+[node name="CreditsUI" type="CanvasLayer" parent="." unique_id=1204783391]
+visible = false
 
 [node name="Panel" type="Panel" parent="CreditsUI" unique_id=1509232811]
 offset_right = 1155.0
 offset_bottom = 648.0
 
-[node name="CreditButton" type="Button" parent="." unique_id=482060809]
-layout_mode = 0
-offset_left = 466.0
-offset_top = 248.0
-offset_right = 669.0
-offset_bottom = 279.0
-text = "Credits"
+[node name="CreditsLabel" type="Label" parent="CreditsUI" unique_id=495572679]
+offset_right = 109.0
+offset_bottom = 23.0
+text = "Whaaat
+"
 
-[node name="QuitButton" type="Button" parent="." unique_id=871315375]
-layout_mode = 0
-offset_left = 488.0
-offset_top = 321.0
-offset_right = 640.0
-offset_bottom = 359.0
-text = "Quit"
+[node name="ExitCredits" type="Button" parent="CreditsUI" unique_id=684786200]
+offset_left = 4.53
+offset_right = 54.53
+offset_bottom = 50.0
+text = "EXIT
+"
 
-[node name="StartButton" type="Button" parent="." unique_id=1366472926]
-layout_mode = 0
-offset_left = 526.0
-offset_top = 191.0
-offset_right = 628.0
-offset_bottom = 222.0
-text = "START"
-
-[node name="TitleLabel" type="Label" parent="." unique_id=1110927392]
-layout_mode = 0
-offset_left = 533.0
-offset_top = 142.0
-offset_right = 624.0
-offset_bottom = 165.0
-text = "GAME TITLE"
+[connection signal="pressed" from="CreditButton" to="." method="_on_credit_button_pressed"]
+[connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="HelpButton" to="." method="_on_help_button_pressed"]

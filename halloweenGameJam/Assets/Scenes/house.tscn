@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://c2jnlhmjb3co7"]
+
+[ext_resource type="Texture2D" uid="uid://d0rlbqna48n10" path="res://Assets/Sprites/HouseLightOff.png" id="1_rndms"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rndms"]
+size = Vector2(193, 130)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gyyse"]
+size = Vector2(23, 60)
+
+[node name="House" type="Area2D" unique_id=234569783]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=541764554]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_rndms")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=104213613]
+position = Vector2(9.5, -17)
+shape = SubResource("RectangleShape2D_rndms")
+
+[node name="CollisionShape2DTrickorTreat" type="CollisionShape2D" parent="." unique_id=1498030188]
+position = Vector2(-3.5, 79)
+shape = SubResource("RectangleShape2D_gyyse")

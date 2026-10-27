@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://dbw7rp83ld3d2"]
+
+[ext_resource type="Texture2D" uid="uid://cupjxj3wk6rnf" path="res://Assets/Sprites/Cursor.png" id="1_ys544"]
+[ext_resource type="Script" uid="uid://b6gwwlqjdmjie" path="res://Assets/Scripts/cursor.gd" id="2_1omeh"]
+
+[node name="CursorSprite" type="Sprite2D" unique_id=1055387719]
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("1_ys544")
+script = ExtResource("2_1omeh")

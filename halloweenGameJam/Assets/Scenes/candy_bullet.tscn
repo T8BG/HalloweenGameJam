@@ -1,10 +1,21 @@
 [gd_scene format=3 uid="uid://b6lc3aemduj4c"]
 
 [ext_resource type="Script" uid="uid://dypervrwjb7lr" path="res://Assets/Scripts/candy_bullet.gd" id="1_jpm25"]
+[ext_resource type="Texture2D" uid="uid://bwtru75l1qbjb" path="res://Assets/Sprites/Candy.png" id="2_bq66u"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2gdrs"]
+size = Vector2(30, 20)
 
 [node name="Area2D" type="Area2D" unique_id=1279814720]
 script = ExtResource("1_jpm25")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=47999188]
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_bq66u")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2045978162]
+position = Vector2(0.50000024, 0)
+scale = Vector2(1.5, 1.5)
+shape = SubResource("RectangleShape2D_2gdrs")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
