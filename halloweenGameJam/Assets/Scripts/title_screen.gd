@@ -37,3 +37,13 @@ func _on_quit_button_pressed() -> void:
 func _on_credit_button_pressed() -> void:
 	creditsUI.show()
 	pass # Replace with function body.
+
+
+func _on_exit_help_pressed() -> void:
+	helpUI.hide()
+	pass # Replace with function body.
+
+
+func _on_exit_credits_pressed() -> void:
+	creditsUI.hide()
+	pass # Replace with function body.

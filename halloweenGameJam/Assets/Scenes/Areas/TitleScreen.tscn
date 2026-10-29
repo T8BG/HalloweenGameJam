@@ -73,10 +73,33 @@ text = "CANDY CRITTERS"
 offset_right = 1155.0
 offset_bottom = 648.0
 
-[node name="CreditsLabel" type="Label" parent="HelpUI" unique_id=955326225]
-offset_right = 109.0
-offset_bottom = 23.0
-text = "CREDITS HERE"
+[node name="HelpLabel" type="Label" parent="HelpUI" unique_id=955326225]
+offset_left = 79.0
+offset_top = 62.0
+offset_right = 1106.0
+offset_bottom = 354.0
+theme_override_constants/outline_size = 25
+theme_override_fonts/font = ExtResource("2_i1ksy")
+theme_override_font_sizes/font_size = 35
+text = "                                                           Story:
+Uh oh! Halloween is almost over and the children are fiending for some candy! 
+Defend your neighbourhood by throwing candy at the children! Do some 
+trick-or-treating while you are at it!
+ 
+                                                         Controls:
+W or Up Arrow - Up
+S or Down Arrow - Down
+A or Left Arrow - Left
+D or Right Arrow - Right
+Left Click - Shoot
+Z - Trick-or-Treat"
+
+[node name="ExitHelp" type="Button" parent="HelpUI" unique_id=2006610817]
+offset_left = 516.0
+offset_top = 578.0
+offset_right = 666.0
+offset_bottom = 630.0
+text = "EXIT"
 
 [node name="CreditsUI" type="CanvasLayer" parent="." unique_id=1204783391]
 visible = false
@@ -86,15 +109,23 @@ offset_right = 1155.0
 offset_bottom = 648.0
 
 [node name="CreditsLabel" type="Label" parent="CreditsUI" unique_id=495572679]
-offset_right = 109.0
-offset_bottom = 23.0
-text = "Whaaat
-"
+offset_left = 214.0
+offset_top = 186.0
+offset_right = 965.0
+offset_bottom = 419.0
+theme_override_constants/outline_size = 25
+theme_override_fonts/font = ExtResource("2_i1ksy")
+theme_override_font_sizes/font_size = 50
+text = "                         CREDITS:
+Programming: Cody Soloveoff
+Art: Cody Soloveoff
+Font: Scary Feet by Mehibi @ dafont.com"
 
 [node name="ExitCredits" type="Button" parent="CreditsUI" unique_id=684786200]
-offset_left = 4.53
-offset_right = 54.53
-offset_bottom = 50.0
+offset_left = 505.0
+offset_top = 581.0
+offset_right = 666.0
+offset_bottom = 631.0
 text = "EXIT
 "
 
@@ -102,3 +133,5 @@ text = "EXIT
 [connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]
 [connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="HelpButton" to="." method="_on_help_button_pressed"]
+[connection signal="pressed" from="HelpUI/ExitHelp" to="." method="_on_exit_help_pressed"]
+[connection signal="pressed" from="CreditsUI/ExitCredits" to="." method="_on_exit_credits_pressed"]

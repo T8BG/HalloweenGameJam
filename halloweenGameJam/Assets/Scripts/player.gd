@@ -4,6 +4,9 @@ var screen_size
 
 @export var Candy_Scene: PackedScene
 
+func _ready() -> void:
+	add_to_group("Player")
+
 func _physics_process(delta: float) -> void:
 	#Shoot stuff
 	if Input.is_action_just_pressed("Shoot"):
