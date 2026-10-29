@@ -1,0 +1,96 @@
+[gd_scene format=3 uid="uid://ck673twg4avq4"]
+
+[ext_resource type="Script" uid="uid://cq41ym1f818km" path="res://Assets/Scripts/game_world.gd" id="1_c4e7b"]
+[ext_resource type="PackedScene" uid="uid://dbw7rp83ld3d2" path="res://Assets/Scenes/cursor_sprite.tscn" id="2_vwjdu"]
+[ext_resource type="PackedScene" uid="uid://b6lc3aemduj4c" path="res://Assets/Scenes/candy_bullet.tscn" id="3_i6eio"]
+[ext_resource type="PackedScene" uid="uid://mrny8bmdo5ut" path="res://Assets/Scenes/Player.tscn" id="3_rm2es"]
+[ext_resource type="FontFile" uid="uid://rj2tcbopc3or" path="res://Assets/Fonts/Scary Feet.ttf" id="4_chd1q"]
+[ext_resource type="Texture2D" uid="uid://dgudstls25lbh" path="res://Assets/Sprites/Pause.png" id="5_v24s8"]
+[ext_resource type="Texture2D" uid="uid://jf43hq5e1uvt" path="res://Assets/Sprites/PauseHover.png" id="6_4y2y2"]
+[ext_resource type="PackedScene" uid="uid://c2jnlhmjb3co7" path="res://Assets/Scenes/house.tscn" id="6_chd1q"]
+
+[node name="GameWorld" type="Node2D" unique_id=1176257089]
+script = ExtResource("1_c4e7b")
+
+[node name="Player" parent="." unique_id=1428690817 instance=ExtResource("3_rm2es")]
+Candy_Scene = ExtResource("3_i6eio")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=2011772814]
+
+[node name="GameOverUI" type="CanvasLayer" parent="." unique_id=1247939436]
+
+[node name="PlayerUI" type="CanvasLayer" parent="." unique_id=1620637852]
+
+[node name="Panel" type="Panel" parent="PlayerUI" unique_id=1138851137]
+visible = false
+offset_right = 1148.0
+offset_bottom = 646.0
+
+[node name="PlayerHealthLabel" type="Label" parent="PlayerUI" unique_id=837563749]
+offset_left = 7.0
+offset_top = 37.0
+offset_right = 180.0
+offset_bottom = 71.0
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("4_chd1q")
+theme_override_font_sizes/font_size = 30
+text = "HEALTH"
+
+[node name="PlayerScoreLabel" type="Label" parent="PlayerUI" unique_id=43006783]
+offset_left = 8.0
+offset_right = 78.0
+offset_bottom = 34.0
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("4_chd1q")
+theme_override_font_sizes/font_size = 30
+text = "SCORE"
+
+[node name="PauseTextureButton" type="TextureButton" parent="PlayerUI" unique_id=1674816296]
+offset_left = 1057.0
+offset_top = 8.0
+offset_right = 1143.0
+offset_bottom = 94.0
+texture_normal = ExtResource("5_v24s8")
+texture_pressed = ExtResource("5_v24s8")
+texture_hover = ExtResource("6_4y2y2")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="WaveLabel" type="Label" parent="PlayerUI" unique_id=618791287]
+offset_left = 6.0
+offset_top = 72.0
+offset_right = 197.0
+offset_bottom = 106.0
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("4_chd1q")
+theme_override_font_sizes/font_size = 30
+text = "WAVE"
+
+[node name="Houses" type="Node" parent="." unique_id=112445695]
+
+[node name="House6" parent="Houses" unique_id=234569783 instance=ExtResource("6_chd1q")]
+position = Vector2(457, -77)
+rotation = 1.5707963
+
+[node name="House5" parent="Houses" unique_id=1089618556 instance=ExtResource("6_chd1q")]
+position = Vector2(454.00012, 171.00009)
+rotation = 1.5707963
+
+[node name="House4" parent="Houses" unique_id=1310916233 instance=ExtResource("6_chd1q")]
+position = Vector2(459, -292.99997)
+rotation = 1.5707964
+
+[node name="House3" parent="Houses" unique_id=1390227139 instance=ExtResource("6_chd1q")]
+position = Vector2(-468, -300)
+rotation = -1.5707964
+
+[node name="House2" parent="Houses" unique_id=518141411 instance=ExtResource("6_chd1q")]
+position = Vector2(-466, -54)
+rotation = -1.5707964
+
+[node name="House" parent="Houses" unique_id=1428817597 instance=ExtResource("6_chd1q")]
+position = Vector2(-468, 201)
+rotation = -1.5707964
+
+[node name="CursorSprite" parent="." unique_id=1055387719 instance=ExtResource("2_vwjdu")]
+z_index = 1000

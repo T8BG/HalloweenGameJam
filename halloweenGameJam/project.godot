@@ -14,10 +14,15 @@ config/name="HalloweenGameJam"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+GameManager="*uid://ejsyo3kbgc4f"
+
 [display]
 
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
+mouse_cursor/custom_image="uid://cupjxj3wk6rnf"
 
 [dotnet]
 

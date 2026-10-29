@@ -37,7 +37,9 @@ func rotate_player():
 	rotation = (get_global_mouse_position() -global_position).angle() + deg_to_rad(90)
 
 func shoot():
-	var b = Candy_Scene.instantiate()
-	get_tree().current_scene.add_child(b)
-	b.global_position = global_position
-	b.global_rotation = global_rotation
+	if(GameManager.ammo > 0):
+		var b = Candy_Scene.instantiate()
+		get_tree().current_scene.add_child(b)
+		b.global_position = global_position
+		b.global_rotation = global_rotation
+		GameManager.ammo -= 1
