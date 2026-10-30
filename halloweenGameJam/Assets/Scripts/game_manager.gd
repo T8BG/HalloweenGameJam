@@ -8,6 +8,7 @@ var ammo = 25
 
 var mask = 1
 
+var enemy_count = 5
 @onready var gameWorld = null
 
 # Called when the node enters the scene tree for the first time.

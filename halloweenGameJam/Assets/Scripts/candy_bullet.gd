@@ -16,5 +16,7 @@ func _on_body_entered(body: Node2D) -> void:
 		return
 	if body.is_in_group("Children"):
 		body.queue_free()
+		GameManager.score += 100
+		GameManager.enemy_count -= 1
 	queue_free()
 	pass # Replace with function body.

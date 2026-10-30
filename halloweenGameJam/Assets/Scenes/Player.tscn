@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://mrny8bmdo5ut"]
 
-[ext_resource type="Texture2D" uid="uid://doy4vuslvruu6" path="res://icon.svg" id="1_3e2tf"]
 [ext_resource type="Script" uid="uid://om8w41n1li0e" path="res://Assets/Scripts/player.gd" id="1_b2ifw"]
+[ext_resource type="Texture2D" uid="uid://71j4i68a3hqf" path="res://Assets/Sprites/Players/PlayerDemon.png" id="2_b2ifw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2gdrs"]
 size = Vector2(125, 116)
@@ -12,8 +12,8 @@ script = ExtResource("1_b2ifw")
 [node name="Camera2D" type="Camera2D" parent="." unique_id=767686653]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=691740961]
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("1_3e2tf")
+scale = Vector2(3.5, 3.5)
+texture = ExtResource("2_b2ifw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=417078237]
 position = Vector2(-1.5, -2)
