@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dxkuqmmasybtm"
-path="res://.godot/imported/Street.png-74bbb81c7ba31b151a822115cc99d240.ctex"
+uid="uid://cgbk8x8t2cpn3"
+path="res://.godot/imported/Fence.png-4778dc602688c094601437a29fa50c91.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Street.png"
-dest_files=["res://.godot/imported/Street.png-74bbb81c7ba31b151a822115cc99d240.ctex"]
+source_file="res://Assets/Sprites/Tilemaps/Fence.png"
+dest_files=["res://.godot/imported/Fence.png-4778dc602688c094601437a29fa50c91.ctex"]
 
 [params]
 

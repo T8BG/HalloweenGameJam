@@ -68,6 +68,7 @@ theme_override_font_sizes/font_size = 128
 text = "CANDY CRITTERS"
 
 [node name="HelpUI" type="CanvasLayer" parent="." unique_id=1076240908]
+visible = false
 
 [node name="Panel" type="Panel" parent="HelpUI" unique_id=766632946]
 offset_right = 1155.0

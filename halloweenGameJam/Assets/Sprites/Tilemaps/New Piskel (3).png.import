@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bdhqqoxmf2cdm"
-path="res://.godot/imported/SidewalkAndGrass.png-58db37c2f8d89c68cbd6e72406d6b579.ctex"
+uid="uid://dc20ov68o8l8r"
+path="res://.godot/imported/New Piskel (3).png-e6187143a862807dc6c527aab89fa889.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/SidewalkAndGrass.png"
-dest_files=["res://.godot/imported/SidewalkAndGrass.png-58db37c2f8d89c68cbd6e72406d6b579.ctex"]
+source_file="res://Assets/Sprites/Tilemaps/New Piskel (3).png"
+dest_files=["res://.godot/imported/New Piskel (3).png-e6187143a862807dc6c527aab89fa889.ctex"]
 
 [params]
 
