@@ -1,5 +1,5 @@
 extends CharacterBody2D
-const SPEED = 800
+const SPEED = 700
 var screen_size
 
 const SPREAD_ANGLE = 20.0

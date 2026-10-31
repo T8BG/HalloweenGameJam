@@ -35,6 +35,9 @@ func _process(delta: float) -> void:
 
 func _on_start_button_pressed() -> void:
 	print("Start button pressed")
+	GameManager.mask = 1
+	GameManager.score = 0
+	GameManager.wave = 1
 	get_tree().change_scene_to_file("res://Assets/Scenes/Areas/GameWorld.tscn")
 	pass # Replace with function body.
 
