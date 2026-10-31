@@ -11,6 +11,7 @@ class_name GameWorld
 @export var Child_Scene: PackedScene
 @export var spawn_radius: float = 350
 
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$PlayerUI.show()
@@ -28,10 +29,20 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	if Input.is_action_pressed("One"):
+		$Player/Sprite2D.texture = load("res://Assets/Sprites/Players/PlayerDemon.png")
+		GameManager.mask = 1
+	if Input.is_action_pressed("Two"):
+		$Player/Sprite2D.texture = load("res://Assets/Sprites/Players/PlayerFrankie.png")
+		GameManager.mask = 2
+	if Input.is_action_pressed("Three"):
+		$Player/Sprite2D.texture = load("res://Assets/Sprites/Players/PlayerPrincess.png")
+		GameManager.mask = 3
 	update_UI()
 	if(GameManager.enemy_count <= 0):
 		GameManager.wave += 1
 		spawn_wave(5)
+		
 	pass
 	
 #func update_user_score(score: int):

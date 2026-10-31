@@ -93,7 +93,7 @@ S or Down Arrow - Down
 A or Left Arrow - Left
 D or Right Arrow - Right
 Left Click - Shoot
-Z - Trick-or-Treat"
+Q - Trick-or-Treat"
 
 [node name="ExitHelp" type="Button" parent="HelpUI" unique_id=2006610817]
 offset_left = 516.0

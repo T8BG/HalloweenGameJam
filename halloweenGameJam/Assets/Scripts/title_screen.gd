@@ -6,6 +6,7 @@ extends Control
 
 @onready var helpUI = get_node_or_null("HelpUI") as CanvasLayer
 @onready var creditsUI = get_node_or_null("CreditsUI") as CanvasLayer
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	#helpUI.hide()

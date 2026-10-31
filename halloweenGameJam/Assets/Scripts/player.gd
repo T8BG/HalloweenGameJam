@@ -12,11 +12,14 @@ var is_bursting = false
 @onready var mainOverlay = get_node_or_null("/root/GameWorld/PlayerUI") as CanvasLayer
 @onready var gameOverOverlay = get_node_or_null("/root/GameWorld/GameOverUI") as CanvasLayer
 
+@onready var gameOverLabel = get_node_or_null("/root/GameWorld/GameOverUI/Label2") as Label
+
 func _ready() -> void:
 	add_to_group("Player")
 	GameManager.ammo = 25
 	GameManager.health = 100
 	GameManager.enemy_count = 5
+	GameManager.wave = 1
 
 func _physics_process(delta: float) -> void:
 	if(GameManager.health >= 1):
@@ -27,16 +30,16 @@ func _physics_process(delta: float) -> void:
 		var direction = Vector2.ZERO
 		if Input.is_action_pressed("Up"):
 			direction.y -= 1
-			print(global_position.y)
+			#print(global_position.y)
 		if Input.is_action_pressed("Down"):
 			direction.y += 1
-			print(global_position.y)
+			#print(global_position.y)
 		if Input.is_action_pressed("Left"):
 			direction.x -= 1
-			print(global_position.x)
+			#print(global_position.x)
 		if Input.is_action_pressed("Right"):
 			direction.x += 1
-			print(global_position.x)
+			#print(global_position.x)
 			
 		if direction.length() > 0:
 			direction = direction.normalized() * SPEED
@@ -50,6 +53,7 @@ func _physics_process(delta: float) -> void:
 	if(GameManager.health <= 0):
 		mainOverlay.hide()
 		GameManager.enemy_count = 500
+		gameOverLabel.text = "Wave: " + str(GameManager.wave)
 		gameOverOverlay.show()
 
 func rotate_player():
