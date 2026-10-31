@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bujc0ykcqqfg0" path="res://Assets/Scripts/title_screen.gd" id="1_8plbf"]
 [ext_resource type="FontFile" uid="uid://rj2tcbopc3or" path="res://Assets/Fonts/Scary Feet.ttf" id="2_i1ksy"]
+[ext_resource type="PackedScene" uid="uid://26vehv32w74y" path="res://Assets/Scenes/star.tscn" id="2_w2ncl"]
 
 [node name="TitleScreen" type="Control" unique_id=1875287960]
 layout_mode = 3
@@ -11,6 +12,33 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_8plbf")
+
+[node name="Stars" type="Node" parent="." unique_id=1089813498]
+
+[node name="Star4" parent="Stars" unique_id=1390748966 instance=ExtResource("2_w2ncl")]
+z_index = -4096
+position = Vector2(344.99997, 34.999996)
+scale = Vector2(5, 5)
+
+[node name="Star" parent="Stars" unique_id=1176684913 instance=ExtResource("2_w2ncl")]
+z_index = -4096
+position = Vector2(146.99998, 198.99998)
+scale = Vector2(5, 5)
+
+[node name="Star2" parent="Stars" unique_id=277721757 instance=ExtResource("2_w2ncl")]
+z_index = -4096
+position = Vector2(64, 70)
+scale = Vector2(5, 5)
+
+[node name="Star3" parent="Stars" unique_id=1914837074 instance=ExtResource("2_w2ncl")]
+z_index = -4096
+position = Vector2(344.99997, 259.99997)
+scale = Vector2(5, 5)
+
+[node name="Star5" parent="Stars" unique_id=1144682534 instance=ExtResource("2_w2ncl")]
+z_index = -999
+position = Vector2(854.99994, 311.99997)
+scale = Vector2(5, 5)
 
 [node name="CreditButton" type="Button" parent="." unique_id=482060809]
 layout_mode = 0
